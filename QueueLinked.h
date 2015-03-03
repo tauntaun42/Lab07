@@ -124,13 +124,9 @@ T* QueueLinked<T>::dequeue()
 		{
 			NextNode<T>* prev = NULL;
 			NextNode<T>* curr = back->getNext();  //the head
-
-			while (curr != NULL)
-			{
-			  prev = curr;
-			  curr = curr->getNext();
-			  delete prev;
-			}
+			
+			item = curr;
+			back->setNext(curr->getNext());
 		}
 	}
     return item;
