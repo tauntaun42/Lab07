@@ -88,8 +88,8 @@ void QueueLinked<T>::enqueue(T* item)
     //DO THIS (enqueueing the first item is a special case)
 	if (sze == 0)
 	{
-		node->setNext(node);
 		back = node;
+		node->setNext(node);
 	}
 	
 	else
