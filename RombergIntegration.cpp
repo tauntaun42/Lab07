@@ -40,12 +40,15 @@ double RombergIntegration::accurateRomberg(MultiVarFunction* f, double a, double
    //the total number of executions of the loop is ??
 
    //DO THIS
-   int iterations =                //can be precomputed
+   int iter = 0;
+   while (n != 0)
+	   n += n-1;
+   int iterations = iter; //can be precomputed
    while (iterations > 0)
    {
       //DO THIS
       //use the algorithm described in the lab to improve the accuracy of your level 0 results
-	  
+	  q2->enqueue(q1->peek());
 	  
       iterations--;
    }
